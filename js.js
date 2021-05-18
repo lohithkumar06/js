@@ -45,8 +45,12 @@ console.log(type)
 // swappin
 let a = "red"
 let b = "Blue"
+console.log("Before Swap")
+console.log(a)
+console.log(b)
 c = a
 a = b 
 b = c
+console.log("After Swap")
 console.log(a)
 console.log(b)
