@@ -54,3 +54,55 @@ b = c
 console.log("After Swap")
 console.log(a)
 console.log(b)
+
+// 19/5/2021............................................................................................
+// if else
+let hour = 10
+if (hour>=6 && hour<12){
+    console.log("Good Morning....")
+}
+else if (hour>=12 && hour<18){
+    console.log("Good Afternoon....")
+}
+else{
+    console.log("Good Evening")
+}
+
+// for loop
+for(let i=0; i<5; i++){
+    console.log("hello lohith")   
+}
+
+// while loop
+let i=0;
+while(i<5){
+    console.log("hello lohith")
+    i++;
+}
+
+// for with object key and value
+const person3={name:"Rohith",age:25}
+for(let key in person3){
+    console.log(key,person3[key])
+}
+
+// for with array using values type1
+ const color1 = ["blue","brown", "baby pink"]
+ for (let index in color1){
+     console.log(index,color1[index])
+ }
+
+ // for with array using values type2
+ const color2 = ["blue","brown", "baby pink"]
+ for (let index1 of color2){
+     console.log(index1)
+ }
+
+//  break
+let j = 0;
+while (j<=10){
+    if(j===5)
+    break
+    console.log(j);
+    j++;
+}
