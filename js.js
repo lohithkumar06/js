@@ -54,6 +54,7 @@ b = c
 console.log("After Swap")
 console.log(a)
 console.log(b)
+console.log("\n")
 
 // 19/5/2021............................................................................................
 // if else
@@ -106,3 +107,79 @@ while (j<=10){
     console.log(j);
     j++;
 }
+console.log("\n")
+
+// 20/05/2021.................................................................
+// string
+const message = "This is my first\n message"
+// length
+console.log(message.length)
+// to get specify letter
+console.log(message[0])
+// true/false includes
+console.log(message.includes("my"))
+// true/false startswith
+console.log(message.startsWith("my"))
+console.log(message)
+// split
+console.log(message.split(" "))
+console.log(message.split(""))
+// oops
+let address = {
+    street : "a",
+    city : "b",
+    zipcode : "c"
+}
+function showAddress(address){
+    for(let key in address){
+        console.log(key,":" ,address[key])
+    }
+}
+showAddress(address)
+
+// factory function
+let address1 = creatAddress("a","b","c");
+console.log(address);
+function creatAddress(street,city,zipcode){
+    return{
+        street,
+        city,
+        zipcode
+    }
+}
+
+// constructor function
+
+let address2 = new Address("a","b","c","d")
+
+function Address (street,city,zipcode,code){
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+    this.code = code
+}
+console.log(address2)
+
+// object equality
+let address3 = new Addre("a","b","c");
+let address4 = new Addre("a","b","c");
+let address5 = address3;
+
+function Addre(area,state,code){
+    this.area = area;
+    this.state = state;
+    this.code = code;
+}
+
+function areEqual(address3, address4){
+    address3.area === address4.area &&
+    address3.state === address4.state &&
+    address3.code === address4.code;
+}
+function areSame(address3, address4){
+    return address3 === address4;
+}
+
+console.log(areEqual(address3, address4));
+console.log(areSame(address3, address4));
+console.log(areSame(address3, address5));
