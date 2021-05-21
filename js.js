@@ -183,3 +183,70 @@ function areSame(address3, address4){
 console.log(areEqual(address3, address4));
 console.log(areSame(address3, address4));
 console.log(areSame(address3, address5));
+console.log("\n")
+
+
+// 21-05-2021........................................................
+
+// blog post object
+let post = {
+    tittle : "a",
+    body : "b",
+    author : "c",
+    views : 10 ,
+    comments : [
+        {author : "a",body : "b"},
+        {author : "c",body : "d"} ]
+
+};
+console.log(post)
+
+// same using constructor type
+let post2 = new Post1("a","b","c");
+function Post1 (title,body,author){
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.view = 0;
+    this.comments = [{author : "a",body : "b"},
+    {author : "c",body : "d"}];
+}
+console.log(post2)
+
+// emptying on array
+let seq = [1,2,3,4,5,6]
+let another = seq
+seq = []
+console.log(seq)
+console.log(another)
+
+// combining & slicing array 
+const first = [1,2,3]
+const second = [4,5,6]
+// type1(combine)
+const combined = first.concat(second)
+console.log(combined)
+// type2(from,to using index)
+const sliced = combined.slice(2,4)
+console.log(sliced)
+// type3
+const sliced1 = combined.slice(2)
+console.log(sliced1)
+
+// iterating on array
+const num01 = [1,2,3]
+for (number of num01){
+    console.log(number)
+}
+
+// sorting Array
+const num001 = [4,7,5,9,2,8]
+num001.sort();
+console.log(num001)
+
+// rest operator
+function sum(...args){
+    let total = 0;
+    return args.reduce((a,b)=> a+b);
+}
+console.log(sum(1,2,3,4,5,10))
